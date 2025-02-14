@@ -9,5 +9,5 @@ services:
       - KUBECONFIG=/root/.kube/config
       - GOOGLE_APPLICATION_CREDENTIALS=/root/.config/gcloud/application_default_credentials.json
     volumes:
-      - ~/.kube/config:/root/.kube/config  # Mount local kubeconfig file
+      - ~/.kube:/root/.kube:ro  # Mount local kubeconfig file
       - ~/.config/gcloud:/root/.config/gcloud  # Mount local gcloud config
