@@ -9,4 +9,3 @@ langgraph
 langchain_google_vertexai
 google-cloud-container
 kubernetes==31.0.0
-gke-gcloud-auth-plugin
