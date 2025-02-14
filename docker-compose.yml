@@ -4,8 +4,10 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8080:8000"
     environment:
       - KUBECONFIG=/root/.kube/config
+      - GOOGLE_APPLICATION_CREDENTIALS=/root/.config/gcloud/application_default_credentials.json
     volumes:
       - ~/.kube/config:/root/.kube/config  # Mount local kubeconfig file
+      - ~/.config/gcloud:/root/.config/gcloud  # Mount local gcloud config
