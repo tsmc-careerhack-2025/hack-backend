@@ -8,6 +8,7 @@ import os
 
 def load_kube_config():
     """Load Kubernetes config."""
+    os.environ["KUBECONFIG"] = "/root/.kube/config"
     try:
         config.load_kube_config()  # Use local kubeconfig
     except:
